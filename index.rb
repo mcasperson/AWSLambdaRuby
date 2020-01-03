@@ -1,9 +1,9 @@
 require 'json'
 
-def handler(input:, context:)
+def handler(event:, context:)
   {
       statusCode: 200,
-      body: JSON.generate(input),
+      body: JSON.generate(event),
       headers: {"Access-Control-Allow-Origin": "*"}
   }
 end
